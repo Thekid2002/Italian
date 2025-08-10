@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Italian Flashcards</title>
+</head>
+<body>
+<nav>
+    <a href="index.html">Flashcards</a> |
+    <a href="write-translation.html">Translation Practice</a> |
+    <a href="dictionary.html">Dictionary</a> |
+    <a href="select-translation.html">Select Translation</a>
+</nav>
+
+<h1>Italian Flashcards</h1>
+
+<label for="category">Choose a category:</label>
+<select id="category"></select>
+
+<div id="card" style="margin-top:20px;">
+    <h2 id="front"></h2>
+    <p id="back" style="display:none;"></p>
+</div>
+
+<button onclick="lastCard()">Back</button>
+<button onclick="nextCard()">Next</button>
+<button onclick="toggleBack()">Show/Hide Translation</button>
+
+<script src="script.js"></script>
+</body>
+</html>

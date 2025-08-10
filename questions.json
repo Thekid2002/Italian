@@ -1,0 +1,57 @@
+[
+  {
+    "question": "Tu sei Thomas?",
+    "question_translation": "Er du Thomas?",
+    "answers": [
+      {"text": "Mi chiamo Thomas, sì.", "translation": "Jeg hedder Thomas, ja."},
+      {"text": "Io vivo a Danimarca.", "translation": "Jeg bor i Danmark."},
+      {"text": "Sì, sono Thomas.", "translation": "Ja, jeg er Thomas."},
+      {"text": "No, sono Marco.", "translation": "Nej, jeg er Marco."}
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Dove abiti?",
+    "question_translation": "Hvor bor du?",
+    "answers": [
+      {"text": "Abito a Roma.", "translation": "Jeg bor i Rom."},
+      {"text": "Mi chiamo Luca.", "translation": "Jeg hedder Luca."},
+      {"text": "Ho venti anni.", "translation": "Jeg er tyve år gammel."},
+      {"text": "Vado a scuola.", "translation": "Jeg går i skole."}
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Come ti chiami?",
+    "question_translation": "Hvad hedder du?",
+    "answers": [
+      {"text": "Mi chiamo Anna.", "translation": "Jeg hedder Anna."},
+      {"text": "Abito a Milano.", "translation": "Jeg bor i Milano."},
+      {"text": "Sto bene, grazie.", "translation": "Jeg har det godt, tak."},
+      {"text": "Ho una sorella.", "translation": "Jeg har en søster."}
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Quanti anni hai?",
+    "question_translation": "Hvor gammel er du?",
+    "answers": [
+      {"text": "Ho diciotto anni.", "translation": "Jeg er atten år gammel."},
+      {"text": "Vivo a Firenze.", "translation": "Jeg bor i Firenze."},
+      {"text": "Mi piace il gelato.", "translation": "Jeg kan godt lide is."},
+      {"text": "Sono studente.", "translation": "Jeg er studerende."}
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Che cosa fai?",
+    "question_translation": "Hvad laver du?",
+    "answers": [
+      {"text": "Studio all'università.", "translation": "Jeg studerer på universitetet."},
+      {"text": "Vivo con la mia famiglia.", "translation": "Jeg bor sammen med min familie."},
+      {"text": "Mi piace la pizza.", "translation": "Jeg kan godt lide pizza."},
+      {"text": "Ho un cane.", "translation": "Jeg har en hund."}
+    ],
+    "correct": 0
+  }
+]

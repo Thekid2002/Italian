@@ -17,10 +17,26 @@
 <label for="category">Choose a category:</label>
 <select id="category"></select>
 
-<div id="card" style="margin-top:20px;">
-    <h2 id="front"></h2>
-    <p id="back" style="display:none;"></p>
+<div id="card">
 </div>
+<style>
+    @media (min-width: 601px) {
+        #card {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            justify-items: center;
+            align-items: start;
+        }
+    }
+    @media (max-width: 600px) {
+        #card {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+</style>
 <script src="script.js"></script>
 </body>
 </html>

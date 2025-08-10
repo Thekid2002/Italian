@@ -16,41 +16,50 @@ async function loadFlashcards() {
 
     select.addEventListener('change', () => {
         currentCategory = select.value;
-        currentIndex = 0;
-        showCard();
+        showAllCards();
     });
 
     // Default load
     select.value = Object.keys(flashcards)[0];
     currentCategory = select.value;
-    showCard();
+    showAllCards();
 }
 
-function showCard() {
+function showAllCards() {
     if (!currentCategory) return;
-
-    const card = flashcards[currentCategory][currentIndex];
-    document.getElementById('front').textContent = card.front;
-    document.getElementById('back').textContent = card.back;
-    document.getElementById('back').style.display = 'none';
+    const container = document.getElementById('card');
+    container.innerHTML = '';
+    flashcards[currentCategory].forEach((card, idx) => {
+        const cardDiv = document.createElement('div');
+        cardDiv.className = 'flashcard';
+        cardDiv.style.display = 'inline-block';
+        cardDiv.style.margin = '10px';
+        cardDiv.style.padding = '20px';
+        cardDiv.style.border = '1px solid #ccc';
+        cardDiv.style.borderRadius = '8px';
+        cardDiv.style.color = '#000000ff';
+        cardDiv.style.cursor = 'pointer';
+        cardDiv.style.minWidth = '120px';
+        cardDiv.style.textAlign = 'center';
+        cardDiv.textContent = card.front;
+        cardDiv.dataset.side = 'front';
+        cardDiv.onclick = function() {
+            if (cardDiv.dataset.side === 'front') {
+                cardDiv.textContent = card.back;
+                cardDiv.style.background = '#4caf50'; // green for back
+                cardDiv.color = '#000000ff';
+                cardDiv.dataset.side = 'back';
+            } else {
+                cardDiv.textContent = card.front;
+                cardDiv.style.background = '#fff';
+                cardDiv.style.color = '#000000ff';
+                cardDiv.dataset.side = 'front';
+            }
+        };
+        container.appendChild(cardDiv);
+    });
 }
 
-function toggleBack() {
-    const back = document.getElementById('back');
-    back.style.display = back.style.display === 'none' ? 'block' : 'none';
-}
-
-function lastCard() {
-    if (!flashcards[currentCategory]) return;
-    if (currentIndex - 1 < 0) currentIndex = flashcards[currentCategory].length-1;
-    else currentIndex = (currentIndex - 1);
-    showCard();
-}
-
-function nextCard() {
-    if (!flashcards[currentCategory]) return;
-    currentIndex = (currentIndex + 1) % flashcards[currentCategory].length;
-    showCard();
-}
+// Remove lastCard and nextCard, not needed for showing all cards
 
 loadFlashcards();

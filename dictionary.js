@@ -1,7 +1,7 @@
 let allWords = [];
 
 async function loadDictionary() {
-    const res = await fetch('/flashcards.json');
+    const res = await fetch('flashcards.json');
     const flashcards = await res.json();
     allWords = [];
     for (const category in flashcards) {

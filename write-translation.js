@@ -2,7 +2,7 @@ let flashcards = {};
 let currentCard = null;
 
 async function loadFlashcards() {
-    const res = await fetch('/flashcards.json');
+    const res = await fetch('flashcards.json');
     flashcards = await res.json();
     showRandomCard();
 }

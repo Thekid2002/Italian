@@ -3,7 +3,7 @@ let currentCard = null;
 let correctIndex = 0;
 
 async function loadFlashcards() {
-    const res = await fetch('/flashcards.json');
+    const res = await fetch('flashcards.json');
     const data = await res.json();
     flashcards = Object.values(data).flat();
     showQuestion();

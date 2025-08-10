@@ -3,7 +3,7 @@ let currentCategory = "";
 let currentIndex = 0;
 
 async function loadFlashcards() {
-    const res = await fetch('/flashcards.json');
+    const res = await fetch('flashcards.json');
     flashcards = await res.json();
 
     const select = document.getElementById('category');
